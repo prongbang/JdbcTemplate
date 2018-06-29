@@ -1,0 +1,71 @@
+package com.prongbang.jdbctemplate.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder; 
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
+
+import com.prongbang.jdbctemplate.dao.AbstractDao;
+
+@Repository
+public class AbstractDaoImpl<T> implements AbstractDao<T> {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public int add(T entity) throws Exception {
+	  
+		String sql = "";
+		
+		KeyHolder holder = new GeneratedKeyHolder();
+		
+		jdbcTemplate.update(new PreparedStatementCreator() {
+			
+			@Override
+			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
+				
+				PreparedStatement ps = conn.prepareStatement(sql, new String[]{ "id" });
+				
+				ps.setString(1, );
+				
+				return ps;
+			}
+		}, holder);
+		
+		
+		return 0;
+	}
+
+	@Override
+	public int update(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public T findById(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<T> findAll() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

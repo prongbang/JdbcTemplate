@@ -1,0 +1,43 @@
+package com.prongbang.jdbctemplate.dao.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.prongbang.jdbctemplate.dao.AbstractDao;
+import com.prongbang.jdbctemplate.model.Employee;
+
+@Repository
+public class EmployeeDaoImpl implements AbstractDao<Employee> {
+
+	@Override
+	public int add(Employee entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Employee entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(Employee entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Employee> findAll() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee findById(Employee entity) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

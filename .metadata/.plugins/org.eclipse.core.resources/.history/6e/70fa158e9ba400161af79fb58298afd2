@@ -1,0 +1,31 @@
+package com.prongbang.jdbctemplate.dao.impl;
+
+import com.prongbang.jdbctemplate.dao.AbstractDao;
+
+public class AbstractDaoImpl<T> implements AbstractDao<T> {
+
+	@Override
+	public int add(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public T getById(T entity) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

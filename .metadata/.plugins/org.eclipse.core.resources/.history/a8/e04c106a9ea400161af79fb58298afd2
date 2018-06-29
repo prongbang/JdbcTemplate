@@ -1,0 +1,44 @@
+package com.prongbang.jdbctemplate.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.prongbang.jdbctemplate.dao.EmployeeDao;
+import com.prongbang.jdbctemplate.model.Employee;
+import com.prongbang.jdbctemplate.service.EmployeeService;
+
+@Service
+@Transactional()
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeDao employeeDao;
+	
+	@Override
+	@Transactional(rollbackFor = Exception.class)
+	public int add(Employee entity) throws Exception {
+		
+		return employeeDao.add(entity);
+	}
+
+	@Override
+	@Transactional(rollbackFor = Exception.class)
+	public int update(Employee entity) throws Exception {
+		
+		return employeeDao.update(entity);
+	}
+
+	@Override
+	public int delete(Employee entity) throws Exception {
+		
+		return employeeDao.delete(entity);
+	}
+
+	@Override
+	public Employee findById(Employee entity) throws Exception {
+		
+		return employeeDao.;
+	}
+
+}

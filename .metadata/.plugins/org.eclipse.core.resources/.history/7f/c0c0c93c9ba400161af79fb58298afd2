@@ -1,0 +1,5 @@
+package com.prongbang.jdbctemplate.dao;
+
+public interface EmployeeDao {
+
+}

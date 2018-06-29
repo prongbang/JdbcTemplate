@@ -1,0 +1,13 @@
+package com.prongbang.jdbctemplate.service;
+
+public interface AbstractService<T> {
+
+	public int add(T entity) throws Exception;
+	
+	public int update(T entity) throws Exception;
+	
+	public int delete(T entity) throws Exception;
+	
+	public T getById(T entity) throws Exception;
+	
+}
